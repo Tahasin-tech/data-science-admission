@@ -24,8 +24,8 @@ import yaml
 from db_connection import get_database_connection
 
 st.set_page_config(
-    page_title="Admission Form",
-    page_icon=":sunny:",
+    page_title="Data S Center",
+    page_icon=":chart_with_upwards_trend:",
     # layout="wide",
     initial_sidebar_state="expanded",
 )
@@ -124,21 +124,22 @@ def stat():
         st.write(table)
 
 def main():
-    st.title('Diploma in Data Science Admission')
+    st.title('Diploma in Data Science')
+  st.subheader('The NextGen Course')
     selected=st.sidebar.selectbox('Select',
                         ('-----------',
-                        'Admin',
-                        'Registration',
-                        'Information',
-                        'Status'
+                        'Admin Panel',
+                        'Registration Panel',
+                        'Information Page',
+                        'Current'
                         ))
-    if selected=='Admin':
+    if selected=='Admin Panel':
         admin()
-    elif selected=='Registration':
+    elif selected=='Registration Panel':
         form()
-    elif selected=='Information':
+    elif selected=='Information Page':
         info()
-    elif selected=='Status':
+    elif selected=='Current':
         stat()
 if __name__=='__main__':
     main()
