@@ -125,7 +125,7 @@ def stat():
 
 def main():
     st.title('Diploma in Data Science')
-  st.subheader('The NextGen Course')
+    st.subheader('The NextGen Course')
     selected=st.sidebar.selectbox('Select',
                         ('-----------',
                         'Admin Panel',
